@@ -3,8 +3,10 @@
 
 *{
     font-family: 'Outfit', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .scrollbar-hide::-webkit-scrollbar{
     display: none;
 }
+

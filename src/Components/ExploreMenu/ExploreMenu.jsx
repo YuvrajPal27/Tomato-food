@@ -7,7 +7,7 @@ const ExploreMenu = ({ category, setCategory }) => {
       <h1 className="text-slate-600 font-semibold text-3xl">
         Explore Our Menu
       </h1>
-      <p id="explore-menu-text" className="max-w-[80%] text-shadow-slate-300">
+      <p id="explore-menu-text" className="max-w-[80%] text-shadow-slate-300 lg:max-w-full lg:text-base">
         Choose from a diverse menu featuring a delectable array of dishes
         crafted with the finest ingredients and culinary experties. Our mission
         is to satisfy your cravings and elevate your dining experience , one
@@ -15,7 +15,7 @@ const ExploreMenu = ({ category, setCategory }) => {
       </p>
       <div
         id="explore-menu-list"
-        className="flex justify-between items-center gap-8 text-center mx-20 my-0 overflow-x-scroll scrollbar-hide"
+        className="flex justify-between items-center gap-8 text-center mx-auto my-0 overflow-x-scroll w-full scrollbar-hide"
       >
         {menu_list.map((item, index) => {
           return (
