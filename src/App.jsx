@@ -4,13 +4,18 @@ import Cart from "./Pages/Cart/Cart"
 import PlaceOrder from "./Pages/PlaceOrder/PlaceOrder"
 import { Route, Routes } from "react-router"
 import Footer from "./Components/Footer/Footer"
+import { useState } from "react"
+import LoginPopup from "./Components/LoginPopup/LoginPopup"
 
 function App() {
 
+  const [showLogin, setShowLogin] = useState(false);
+
   return (
-    <div>
+    <>
+    {showLogin? <LoginPopup setShowLogin={setShowLogin} /> : <></>}
     <div className="w-[80%] m-auto">
-      <Navbar />
+      <Navbar setShowLogin={setShowLogin} />
       <Routes>
         <Route  path="/" element={<Home />} />
         <Route  path="/cart" element={<Cart />} />
@@ -18,7 +23,7 @@ function App() {
       </Routes>
     </div>
     <Footer />
-    </div>
+    </>
   )
 }
 

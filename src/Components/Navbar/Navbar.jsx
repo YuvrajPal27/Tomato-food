@@ -2,7 +2,7 @@ import { useState } from "react";
 import { assets } from "../../assets/assets";
 import { Link } from "react-router";
 
-const Navbar = () => {
+const Navbar = ({setShowLogin}) => {
 
   const [menu, setMenu] = useState("home");
 
@@ -21,7 +21,7 @@ const Navbar = () => {
           <img src={assets.basket_icon} className="w-5 xl:w-6"></img>
           <div id="dot" className="absolute min-w-1.5 min-h-1.5 bg-red-400 rounded-lg top-0 right-0"></div>
         </div>
-        <button className="transparent text-base text-slate-600 border border-solid border-slate-400 px-5 py-2 rounded-3xl cursor-pointer hover:bg-white/10 transition duration-300 xl:py-2 xl:px-6">sign in</button>
+        <button onClick={() => {setShowLogin(true)}} className="transparent text-base text-slate-600 border border-solid border-slate-400 px-5 py-2 rounded-3xl cursor-pointer hover:bg-white/10 transition duration-300 xl:py-2 xl:px-6">sign in</button>
       </div>
     </div>
   );
